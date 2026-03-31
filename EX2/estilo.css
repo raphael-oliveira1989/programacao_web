@@ -1,0 +1,94 @@
+﻿/* Configurações de Reset e Corpo */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f2f5;
+    margin: 0;
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+}
+
+/* Container Principal (Grid/Flex) */
+.container {
+    max-width: 1050px;
+    width: 100%;
+    background-color: #ffffff;
+    padding: 30px;
+    display: flex;
+    gap: 50px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    border-radius: 8px;
+}
+
+/* Coluna da Notícia Principal */
+.main-news {
+    flex: 3;
+}
+
+.main-news img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 6px;
+}
+
+.main-news h1 {
+    font-size: 28px;
+    color: #1a1a1a;
+    margin-top: 25px;
+    line-height: 1.2;
+    font-weight: 800;
+}
+
+/* Barra Lateral de Notícias */
+.sidebar {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; 
+    gap: 50px; 
+    min-height: 550px;
+}
+
+.sidebar-header h2 {
+    font-size: 18px;
+    color: #444;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 3px solid #1a1a1a;
+    padding-bottom: 8px;
+      margin: 0 0 10px 0; 
+}
+
+.sidebar-item {
+     padding: 5px 0; 
+}
+
+.sidebar-item a {
+    text-decoration: none;
+    color: #333;
+    font-size: 19px;
+    font-weight: 500;
+    line-height: 1.4;
+    transition: all 0.2s ease;
+}
+
+/* Efeito ao passar o mouse nos links */
+.sidebar-item a:hover {
+    color: #c00; /* Cor de destaque (vermelho jornalismo) */
+    padding-left: 5px;
+}
+
+/* Ajuste para telas menores (celulares) */
+@media (max-width: 850px) {
+    .container {
+        flex-direction: column;
+        padding: 15px;
+    }
+    
+    .sidebar {
+        min-height: auto;
+        gap: 30px;
+        margin-top: 20px;
+    }
+}
